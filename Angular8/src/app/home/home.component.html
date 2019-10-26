@@ -1,0 +1,127 @@
+<body>
+  <body id="card" style="text-align: center;">
+      <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Your Résumé
+              </mat-panel-title>
+              <mat-panel-description>
+                View Your Résumé
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+          </mat-expansion-panel>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Education
+              </mat-panel-title>
+              <mat-panel-description>
+                {{panelOpenState ? 'School Type' : 'Add your Education'}}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-button-toggle-group #toggleGroup="matButtonToggleGroup">
+                <mat-button-toggle value="High School">High School</mat-button-toggle>
+                <mat-button-toggle value ="College">College</mat-button-toggle>
+                <mat-button-toggle value ="Business or Trade School">Business or Trade School</mat-button-toggle>
+                <mat-button-toggle value="Professional School">Professional School</mat-button-toggle>
+              </mat-button-toggle-group>
+              <br>
+              {{toggleGroup.value}}
+              <br>
+
+              <mat-form-field>
+                <input matInput placeholder="School Name">
+              </mat-form-field><br>
+
+              <mat-form-field>
+                <input matInput placeholder="Address">&nbsp;
+              </mat-form-field>
+              <mat-form-field>
+                  <input matInput placeholder="City">
+              </mat-form-field>
+              <mat-form-field>
+                  <input matInput placeholder="State">
+              </mat-form-field>
+              <mat-form-field>
+                  <input matInput placeholder="ZIP">
+              </mat-form-field><br>
+              <mat-form-field>
+                  <input matInput placeholder="Degree">
+              </mat-form-field>
+              <mat-form-field>
+                  <input matInput placeholder="Major">
+              </mat-form-field>
+              <mat-form-field>
+                  <input matInput placeholder="Years Completed">
+              </mat-form-field>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Employment
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    Add your Employment
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+
+                <mat-form-field>
+                    <input matInput placeholder="Supervisor or Constact">
+                </mat-form-field><br>
+                <mat-form-field>
+                    <input matInput placeholder="Address">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="City">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="State">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="ZIP">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Phone">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Position">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Start Date">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="End Date">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Reason For Quitting">
+                </mat-form-field>
+
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Certifications
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      Add your Certifications
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <mat-form-field>
+                      <input matInput placeholder="Certification">
+                  </mat-form-field><br>
+              </mat-expansion-panel>
+        </mat-accordion>
+
+
+  <span md-colors="{color:'primary'}">
+    <mat-card-title>
+        Welcome to the Calisota App!
+    </mat-card-title><br>
+    <mat-card-content>
+    <button mat-raised-button color="primary" style="margin-right:5px;">Submit</button>
+    </mat-card-content>
+  </span>
+</body>
